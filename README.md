@@ -4,7 +4,7 @@
 
 StockGyan is an experimental, AI-powered financial research platform explicitly designed for the Indian Stock Market (NSE/BSE). By combining deterministic financial modeling with advanced Large Language Models (LLMs), StockGyan provides deep, instant, and human-readable analysis of any Indian stock.
 
-![StockGyan Interface](client/src/assets/hero.png?v=2)
+![StockGyan Interface](client/src/assets/hero.png?v=3)
 
 ## ✨ Features
 
