@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FAFAF8;
+  --color-bg2: #F4F4F1;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  --color-accent: #0F766E;
+  --color-accent-dim: #CCFBF1;
+  --color-accent-hover: #0D6B64;
+  --color-pos: #16A34A;
+  --color-pos-bg: #F0FDF4;
+  --color-pos-bd: #BBF7D0;
+  --color-neu: #D97706;
+  --color-neu-bg: #FFFBEB;
+  --color-neu-bd: #FDE68A;
+  --color-neg: #DC2626;
+  --color-neg-bg: #FEF2F2;
+  --color-neg-bd: #FECACA;
+  --color-bd: #E5E5E3;
+  --color-bd2: #D1D5DB;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg: var(--color-bg);
+    --bg2: var(--color-bg2);
+    --surface: var(--color-surface);
+    --text-primary: var(--color-text-primary);
+    --text-secondary: var(--color-text-secondary);
+    --text-tertiary: var(--color-text-tertiary);
+    --accent: var(--color-accent);
+    --accent-dim: var(--color-accent-dim);
+    --accent-hover: var(--color-accent-hover);
+    --pos: var(--color-pos);
+    --pos-bg: var(--color-pos-bg);
+    --pos-bd: var(--color-pos-bd);
+    --neu: var(--color-neu);
+    --neu-bg: var(--color-neu-bg);
+    --neu-bd: var(--color-neu-bd);
+    --neg: var(--color-neg);
+    --neg-bg: var(--color-neg-bg);
+    --neg-bd: var(--color-neg-bd);
+    --bd: var(--color-bd);
+    --bd2: var(--color-bd2);
+  }
+
+
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}

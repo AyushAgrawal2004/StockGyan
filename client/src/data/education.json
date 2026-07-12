@@ -1,0 +1,44 @@
+{
+  "PE_Ratio": {
+    "name": "P/E Ratio",
+    "what_is_it": "Imagine buying a business. If the business earns ₹100 every year and costs ₹1000, you’re paying 10 years' worth of earnings. That’s essentially the PE Ratio (Price-to-Earnings).",
+    "how_to_use": "Always compare a company's P/E ratio with similar companies in the same sector. A lower P/E *might* mean it's cheap, but it could also mean the market expects it to fail.",
+    "importance": 8
+  },
+  "Market_Cap": {
+    "name": "Market Cap",
+    "what_is_it": "Market Capitalization is the total price tag of the entire company. If you wanted to buy every single share of the company right now, this is how much it would cost.",
+    "how_to_use": "Large-cap companies (huge market cap) are generally safer and more stable. Small-cap companies are riskier but have much higher room for growth.",
+    "importance": 7
+  },
+  "Debt_to_Equity": {
+    "name": "Debt to Equity",
+    "what_is_it": "This shows how much debt a company is using to run its business compared to the money invested by shareholders. It measures financial risk.",
+    "how_to_use": "A very high debt ratio means the company is heavily borrowing. If interest rates rise or business slows down, they might struggle to pay it back. Generally, lower is safer.",
+    "importance": 9
+  },
+  "ROE": {
+    "name": "Return on Equity (ROE)",
+    "what_is_it": "If you gave the company ₹100, how much profit did they generate with your money? ROE measures how efficiently management is using shareholder cash to grow.",
+    "how_to_use": "Higher is always better. An ROE consistently above 15-20% usually indicates a strong, well-run business with a competitive advantage.",
+    "importance": 9
+  },
+  "Current_Ratio": {
+    "name": "Current Ratio",
+    "what_is_it": "A measure of short-term survival. Can the company pay off all its immediate bills (due within a year) using the cash and assets it currently has on hand?",
+    "how_to_use": "A ratio above 1 means they have more cash/assets than immediate debts, which is safe. Below 1 means they might face a cash crunch soon.",
+    "importance": 6
+  },
+  "Dividend_Yield": {
+    "name": "Dividend Yield",
+    "what_is_it": "The percentage of the stock price that the company pays back to you in cash every year, just for holding the stock.",
+    "how_to_use": "Great for passive income! But beware of extremely high yields (e.g., 10%+), as they often mean the stock price crashed and the dividend is about to be cut.",
+    "importance": 5
+  },
+  "Beta": {
+    "name": "Beta",
+    "what_is_it": "A measure of how wildly the stock price swings compared to the overall market (like the NIFTY 50).",
+    "how_to_use": "A Beta of 1 means it moves exactly with the market. >1 means it's more volatile (riskier, bigger swings). <1 means it's more stable.",
+    "importance": 4
+  }
+}
