@@ -4,6 +4,8 @@
 
 StockGyan is an experimental, AI-powered financial research platform explicitly designed for the Indian Stock Market (NSE/BSE). By combining deterministic financial modeling with advanced Large Language Models (LLMs), StockGyan provides deep, instant, and human-readable analysis of any Indian stock.
 
+🔗 **Live Demo:** [https://stock-gyan.vercel.app/](https://stock-gyan.vercel.app/)
+
 ![StockGyan Interface](client/src/assets/hero.png?v=3)
 
 ## ✨ Features
@@ -77,6 +79,32 @@ Once the backend is live, you can deploy the lightning-fast frontend to Vercel.
 - **Root Directory**: `client`
 - Vercel will automatically detect Vite and run `npm run build`.
 - *Note: Our frontend automatically detects production environments and routes API calls to the live Render backend URL.*
+
+## ⚖️ Key Decisions & Trade-offs
+
+1. **Deterministic Math vs. Pure LLM**: 
+   *Decision*: We calculate the score deterministically using raw financial data before the LLM sees it. 
+   *Trade-off*: Takes more backend processing time, but completely eliminates the risk of the LLM hallucinating investment viability or doing math wrong.
+2. **In-Memory Rate Limiting vs. Database**: 
+   *Decision*: Removed MongoDB and used an in-memory Node cache to track the 5-token limit per IP. 
+   *Trade-off*: The limit resets if the server restarts, but it allows for a drastically simpler, free, and instantly deployable architecture.
+3. **Groq Llama 3.3 over OpenAI**: 
+   *Decision*: Used Groq's Llama 3.3 70B Versatile model. 
+   *Trade-off*: Slightly different reasoning capabilities than GPT-4, but provides blazing fast, near-instant inference which is critical for a smooth user experience.
+
+## 📊 Example Runs
+
+Here is how the agent performs on a few popular Indian stocks:
+- **Reliance Industries (RELIANCE.NS)**: Identifies strong market dominance and steady revenue growth, usually resulting in a "Hold" or "Buy" depending on current P/E valuations.
+- **Zomato (ZOMATO.NS)**: Recognizes the high-growth trajectory but flags the extremely high P/E ratio and volatility, advising caution for value investors.
+- **Yes Bank (YESBANK.NS)**: Instantly flags poor historical returns, high debt, and negative sentiment, resulting in a strict "Strong Avoid" verdict.
+
+## 🚀 What I Would Improve With More Time
+
+1. **Vector Database for RAG**: I would integrate Pinecone or ChromaDB to store 10 years of historical SEC/NSE filings, allowing the LLM to read through actual earnings call transcripts instead of just relying on current Yahoo Finance metrics.
+2. **User Authentication & Portfolios**: Add NextAuth/Firebase so users can log in, save their searches, and track a mock portfolio.
+3. **Advanced Technical Indicators**: The current engine focuses heavily on fundamental analysis. I would add MACD, RSI, and Bollinger Bands to the LangGraph node data for short-term trading insights.
+4. **WebSockets for Streaming**: Instead of waiting for the full LLM response, I would implement WebSockets to stream the LangChain thought process (e.g. "Analyzing Debt...", "Reading News...") directly to the UI in real-time.
 
 ## ⚠️ Disclaimer
 
